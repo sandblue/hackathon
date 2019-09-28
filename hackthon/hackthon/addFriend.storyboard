@@ -40,9 +40,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6w-M1-mZ1">
-                                <rect key="frame" x="60" y="453" width="62" height="24"/>
+                                <rect key="frame" x="38" y="453" width="84" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="62" id="HUg-c7-i2V"/>
+                                    <constraint firstAttribute="width" constant="84" id="HUg-c7-i2V"/>
                                     <constraint firstAttribute="height" constant="24" id="uMT-Xm-bjY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -112,7 +112,7 @@
                             <constraint firstItem="yOA-25-AlV" firstAttribute="top" secondItem="hWx-DV-whX" secondAttribute="bottom" constant="36" id="S1h-zV-u7P"/>
                             <constraint firstItem="Pnk-bP-WQL" firstAttribute="top" secondItem="yOA-25-AlV" secondAttribute="bottom" constant="74" id="ZTC-XI-B5E"/>
                             <constraint firstItem="Pnk-bP-WQL" firstAttribute="leading" secondItem="UDw-bz-OTB" secondAttribute="leading" constant="20" id="dz6-oh-XLO"/>
-                            <constraint firstItem="e6w-M1-mZ1" firstAttribute="leading" secondItem="UDw-bz-OTB" secondAttribute="leading" constant="60" id="fDI-cq-nFa"/>
+                            <constraint firstItem="e6w-M1-mZ1" firstAttribute="leading" secondItem="UDw-bz-OTB" secondAttribute="leading" constant="38" id="fDI-cq-nFa"/>
                             <constraint firstItem="UDw-bz-OTB" firstAttribute="trailing" secondItem="yOA-25-AlV" secondAttribute="trailing" constant="75" id="h7m-G6-3HM"/>
                             <constraint firstItem="3eX-G7-hh7" firstAttribute="leading" secondItem="UDw-bz-OTB" secondAttribute="leading" constant="50" id="m5b-Ew-ABR"/>
                             <constraint firstItem="D6v-zn-3lP" firstAttribute="top" secondItem="hWx-DV-whX" secondAttribute="bottom" constant="38" id="qM4-a4-P3C"/>
@@ -125,6 +125,7 @@
                     <navigationItem key="navigationItem" id="CWa-x3-MbS"/>
                     <connections>
                         <outlet property="imFace" destination="3eX-G7-hh7" id="2W2-I7-Pqf"/>
+                        <outlet property="txfName" destination="hWx-DV-whX" id="MYt-0e-SWN"/>
                         <outlet property="txfTel" destination="yOA-25-AlV" id="MLK-du-9js"/>
                     </connections>
                 </viewController>

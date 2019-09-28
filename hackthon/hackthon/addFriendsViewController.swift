@@ -10,6 +10,7 @@ import UIKit
 import ContactsUI
 class addFriendsViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate,dataDelegate {
 
+    @IBOutlet weak var txfName: UITextField!
     @IBOutlet weak var txfTel: UITextField!
     @IBOutlet weak var imFace: UIImageView!
     var chosenImage = UIImage()
@@ -101,6 +102,10 @@ class addFriendsViewController: UIViewController,UIImagePickerControllerDelegate
     
     func userDidEnterInformation(info: String) {
         self.txfTel.text = info
+    }
+    
+    func userDidEnterInformationName(info: String) {
+        self.txfName.text = info
     }
     
     @IBAction func addPressed(_ sender: Any) {

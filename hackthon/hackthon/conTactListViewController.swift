@@ -11,6 +11,7 @@ import ContactsUI
 
 protocol dataDelegate: class {
     func userDidEnterInformation(info: String)
+    func userDidEnterInformationName(info: String)
 }
 
 class conTactListViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
@@ -44,6 +45,7 @@ class conTactListViewController: UIViewController,UITableViewDataSource,UITableV
     
             let dataObj = self.dataContact[indexPath.row]
             delegate?.userDidEnterInformation(info: dataObj.contactNumber!)
+            delegate?.userDidEnterInformationName(info: dataObj.contactName!)
             _ = self.navigationController?.popViewController(animated: true)
             
         }
