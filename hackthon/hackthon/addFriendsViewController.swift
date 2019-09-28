@@ -8,7 +8,7 @@
 
 import UIKit
 import ContactsUI
-class addFriendsViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate {
+class addFriendsViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate,dataDelegate {
 
     @IBOutlet weak var txfTel: UITextField!
     @IBOutlet weak var imFace: UIImageView!
@@ -97,6 +97,19 @@ class addFriendsViewController: UIViewController,UIImagePickerControllerDelegate
     
     @objc func imgChangePhotoTapped(sender:UITapGestureRecognizer) {
         self.showChooseImagePopup()
+    }
+    
+    func userDidEnterInformation(info: String) {
+        self.txfTel.text = info
+    }
+    
+    @IBAction func addPressed(_ sender: Any) {
+        
+    }
+    @IBAction func btnContactPressed(_ sender: Any) {
+        let conTact = UIStoryboard(name: "addFriend", bundle: nil).instantiateViewController(withIdentifier: "conTactListViewController") as! conTactListViewController
+        conTact.delegate = self
+        self.navigationController!.pushViewController(conTact, animated: true)
     }
     
 }
