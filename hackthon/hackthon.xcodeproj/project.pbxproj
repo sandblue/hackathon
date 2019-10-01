@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		051578702342336600B01A11 /* friendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0515786F2342336600B01A11 /* friendListViewController.swift */; };
+		05157874234238D700B01A11 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05157873234238D700B01A11 /* Friend.swift */; };
+		0515787723423A8500B01A11 /* FriendListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0515787523423A8500B01A11 /* FriendListTableViewCell.swift */; };
+		0515787823423A8500B01A11 /* FriendListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0515787623423A8500B01A11 /* FriendListTableViewCell.xib */; };
 		7EA71E4A233FA01300C7C9FD /* addFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA71E49233FA01300C7C9FD /* addFriendsViewController.swift */; };
 		7EA71E4C233FA47100C7C9FD /* addFriendsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA71E4B233FA47100C7C9FD /* addFriendsHelper.swift */; };
 		7EA71E4E233FBF5F00C7C9FD /* conTactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA71E4D233FBF5F00C7C9FD /* conTactListViewController.swift */; };
@@ -45,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0515786F2342336600B01A11 /* friendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendListViewController.swift; sourceTree = "<group>"; };
+		05157873234238D700B01A11 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		0515787523423A8500B01A11 /* FriendListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListTableViewCell.swift; sourceTree = "<group>"; };
+		0515787623423A8500B01A11 /* FriendListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendListTableViewCell.xib; sourceTree = "<group>"; };
 		7EA71E49233FA01300C7C9FD /* addFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addFriendsViewController.swift; sourceTree = "<group>"; };
 		7EA71E4B233FA47100C7C9FD /* addFriendsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addFriendsHelper.swift; sourceTree = "<group>"; };
 		7EA71E4D233FBF5F00C7C9FD /* conTactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conTactListViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +144,10 @@
 				7EA71E4B233FA47100C7C9FD /* addFriendsHelper.swift */,
 				7EA71E4F233FC13F00C7C9FD /* conTactTableViewCell.swift */,
 				7EA71E51233FC38F00C7C9FD /* contactObj.swift */,
+				0515786F2342336600B01A11 /* friendListViewController.swift */,
+				05157873234238D700B01A11 /* Friend.swift */,
+				0515787523423A8500B01A11 /* FriendListTableViewCell.swift */,
+				0515787623423A8500B01A11 /* FriendListTableViewCell.xib */,
 			);
 			path = hackthon;
 			sourceTree = "<group>";
@@ -271,6 +283,7 @@
 				B8397D40233476160064FFEA /* Assets.xcassets in Resources */,
 				B8397D3E233476150064FFEA /* Main.storyboard in Resources */,
 				AEB6A95B23368934009DD791 /* FriendList.storyboard in Resources */,
+				0515787823423A8500B01A11 /* FriendListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,8 +311,11 @@
 				B8397D3B233476150064FFEA /* ViewController.swift in Sources */,
 				7EA71E4E233FBF5F00C7C9FD /* conTactListViewController.swift in Sources */,
 				7EA71E4C233FA47100C7C9FD /* addFriendsHelper.swift in Sources */,
+				0515787723423A8500B01A11 /* FriendListTableViewCell.swift in Sources */,
 				B8397D39233476150064FFEA /* AppDelegate.swift in Sources */,
+				051578702342336600B01A11 /* friendListViewController.swift in Sources */,
 				7EA71E50233FC13F00C7C9FD /* conTactTableViewCell.swift in Sources */,
+				05157874234238D700B01A11 /* Friend.swift in Sources */,
 				7EA71E52233FC38F00C7C9FD /* contactObj.swift in Sources */,
 				7EA71E4A233FA01300C7C9FD /* addFriendsViewController.swift in Sources */,
 			);
