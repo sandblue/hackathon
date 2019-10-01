@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SjE-Zp-wPq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tZx-Q5-2b3">
+            <objects>
+                <viewController id="SjE-Zp-wPq" customClass="ViewController" customModule="hackthon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EWI-U8-E0M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTR-M7-NwA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="546"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gha-6g-7jI">
+                                <rect key="frame" x="160" y="596" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="captureImage:" destination="SjE-Zp-wPq" eventType="touchUpInside" id="zr7-xw-LOC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dav-5P-Oee">
+                                <rect key="frame" x="32" y="582" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Mock"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoI-dH-h8Q">
+                                <rect key="frame" x="294" y="812" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="IAQ-id-ZDo"/>
+                                </constraints>
+                                <state key="normal" title="+Add Friend"/>
+                                <connections>
+                                    <action selector="addFriend:" destination="SjE-Zp-wPq" eventType="touchUpInside" id="Yhg-0p-19o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VTR-M7-NwA" firstAttribute="top" secondItem="J00-57-7JP" secondAttribute="top" id="2Di-n5-sUQ"/>
+                            <constraint firstAttribute="bottom" secondItem="VTR-M7-NwA" secondAttribute="bottom" constant="306" id="2OS-Xe-o1y"/>
+                            <constraint firstItem="VTR-M7-NwA" firstAttribute="leading" secondItem="J00-57-7JP" secondAttribute="leading" id="Q3V-4d-euG"/>
+                            <constraint firstItem="J00-57-7JP" firstAttribute="bottom" secondItem="CoI-dH-h8Q" secondAttribute="bottom" constant="20" id="RvZ-4c-bFG"/>
+                            <constraint firstItem="VTR-M7-NwA" firstAttribute="trailing" secondItem="J00-57-7JP" secondAttribute="trailing" id="Vqr-JI-ne4"/>
+                            <constraint firstItem="J00-57-7JP" firstAttribute="trailing" secondItem="CoI-dH-h8Q" secondAttribute="trailing" constant="20" id="xKA-EA-CCn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="J00-57-7JP"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="addFriend" destination="CoI-dH-h8Q" id="BbR-v1-zvr"/>
+                        <outlet property="captureButton" destination="gha-6g-7jI" id="8Cx-YQ-jDg"/>
+                        <outlet property="capturePreviewView" destination="VTR-M7-NwA" id="Fu6-zR-sJG"/>
+                        <segue destination="tpL-kG-v5Y" kind="show" identifier="goAdd" id="4P7-m0-9PY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTy-vX-EjO" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Camera Second View Controller-->
+        <scene sceneID="9dm-Ft-ffn">
+            <objects>
+                <viewController id="tpL-kG-v5Y" customClass="CameraSecondViewController" customModule="hackthon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cWD-jF-ybg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQy-nt-fGG">
+                                <rect key="frame" x="165" y="80" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="076-ZJ-S5W"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="V4e-jx-r7G"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vMG-JW-mNx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="909" y="134"/>
+        </scene>
+    </scenes>
+</document>
