@@ -13,7 +13,7 @@
         <!--Friend List View Controller-->
         <scene sceneID="pGl-hG-8MP">
             <objects>
-                <viewController id="l43-b5-2Yz" customClass="friendListViewController" customModule="hackthon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="friendListViewController" id="l43-b5-2Yz" customClass="friendListViewController" customModule="hackthon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="suk-34-9ZY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,6 +42,14 @@
                                     <outlet property="delegate" destination="l43-b5-2Yz" id="khO-wA-kZP"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrv-uZ-Rxs">
+                                <rect key="frame" x="16" y="43" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="btnBack:" destination="l43-b5-2Yz" eventType="touchUpInside" id="jzK-6s-m7y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

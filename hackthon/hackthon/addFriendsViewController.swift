@@ -109,6 +109,13 @@ class addFriendsViewController: UIViewController,UIImagePickerControllerDelegate
     }
     
     @IBAction func addPressed(_ sender: Any) {
+      let storyboard = UIStoryboard(name: "FriendList", bundle: nil)
+      guard let friendListViewController = storyboard.instantiateViewController(withIdentifier: "friendListViewController") as? friendListViewController else {
+        return
+      }
+      self.present(friendListViewController, animated: true) {
+        
+      }
         
     }
     @IBAction func btnContactPressed(_ sender: Any) {

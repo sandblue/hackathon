@@ -11,6 +11,7 @@
 		05157874234238D700B01A11 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05157873234238D700B01A11 /* Friend.swift */; };
 		0515787723423A8500B01A11 /* FriendListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0515787523423A8500B01A11 /* FriendListTableViewCell.swift */; };
 		0515787823423A8500B01A11 /* FriendListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0515787623423A8500B01A11 /* FriendListTableViewCell.xib */; };
+		05F3A7A02343635F0041A3DE /* mainpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F3A79F2343635F0041A3DE /* mainpageViewController.swift */; };
 		7EA71E4A233FA01300C7C9FD /* addFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA71E49233FA01300C7C9FD /* addFriendsViewController.swift */; };
 		7EA71E4C233FA47100C7C9FD /* addFriendsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA71E4B233FA47100C7C9FD /* addFriendsHelper.swift */; };
 		7EA71E4E233FBF5F00C7C9FD /* conTactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA71E4D233FBF5F00C7C9FD /* conTactListViewController.swift */; };
@@ -53,6 +54,7 @@
 		05157873234238D700B01A11 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		0515787523423A8500B01A11 /* FriendListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListTableViewCell.swift; sourceTree = "<group>"; };
 		0515787623423A8500B01A11 /* FriendListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendListTableViewCell.xib; sourceTree = "<group>"; };
+		05F3A79F2343635F0041A3DE /* mainpageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainpageViewController.swift; sourceTree = "<group>"; };
 		7EA71E49233FA01300C7C9FD /* addFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addFriendsViewController.swift; sourceTree = "<group>"; };
 		7EA71E4B233FA47100C7C9FD /* addFriendsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addFriendsHelper.swift; sourceTree = "<group>"; };
 		7EA71E4D233FBF5F00C7C9FD /* conTactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = conTactListViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				05157873234238D700B01A11 /* Friend.swift */,
 				0515787523423A8500B01A11 /* FriendListTableViewCell.swift */,
 				0515787623423A8500B01A11 /* FriendListTableViewCell.xib */,
+				05F3A79F2343635F0041A3DE /* mainpageViewController.swift */,
 			);
 			path = hackthon;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			files = (
 				B8397D3B233476150064FFEA /* ViewController.swift in Sources */,
 				7EA71E4E233FBF5F00C7C9FD /* conTactListViewController.swift in Sources */,
+				05F3A7A02343635F0041A3DE /* mainpageViewController.swift in Sources */,
 				7EA71E4C233FA47100C7C9FD /* addFriendsHelper.swift in Sources */,
 				0515787723423A8500B01A11 /* FriendListTableViewCell.swift in Sources */,
 				B8397D39233476150064FFEA /* AppDelegate.swift in Sources */,

@@ -15,13 +15,23 @@ class friendListViewController: UIViewController {
   var friends: [Friend] = []
   
   override func viewDidLoad() {
-    
-    
+ 
     let bundle = Bundle(for: FriendListTableViewCell.self)
     let nib = UINib(nibName: "FriendListTableViewCell", bundle: bundle)
     tableView.register(nib, forCellReuseIdentifier: "FriendListTableViewCell")
     
   }
+  
+  @IBAction func btnBack(_ sender: Any) {
+    let storyboard = UIStoryboard(name: "mainpage", bundle: nil)
+    
+    guard let mainpageViewController = storyboard.instantiateViewController(withIdentifier: "mainpageViewController") as? mainpageViewController else {
+      return
+    }
+    self.present(mainpageViewController, animated: true) {
+    }
+  }
+  
   
 
 }
@@ -44,5 +54,22 @@ extension friendListViewController: UITableViewDataSource {
 }
 
 extension friendListViewController: UITableViewDelegate {
+  func  tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let storyboard = UIStoryboard(name: "addFriend", bundle: nil) //name -> ชื่อไฟล์, nilเพราะยุ pj เดียวกันยุแล้ว
+    
+    guard let addFriendsViewController = storyboard.instantiateViewController(withIdentifier: "addFriendsViewController") as? addFriendsViewController else {
+      return
+    }//id
+    
+    
+//    let item = todoList[indexPath.item].title
+//    detailViewController.str = item
+    //        detailViewController.setTitle(title: item)$1
+    //        self.present(detailViewController, animated: true, completion: nil)//หน้าviewConนี้จะpresentไร$2
+    self.present(addFriendsViewController, animated: true) {
+      
+    }
+    
+  }
   
 }
