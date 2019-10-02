@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Friend List View Controller-->
         <scene sceneID="pGl-hG-8MP">
             <objects>
-                <viewController id="l43-b5-2Yz" sceneMemberID="viewController">
+                <viewController id="l43-b5-2Yz" customClass="friendListViewController" customModule="hackthon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="suk-34-9ZY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cH9-96-hOz">
-                                <rect key="frame" x="0.0" y="73" width="414" height="789"/>
+                                <rect key="frame" x="0.0" y="73" width="414" height="739"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="100" id="ZVK-Hn-mkv">
@@ -96,22 +96,46 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLG-2V-XGe">
+                                <rect key="frame" x="310" y="820" width="84" height="30"/>
+                                <state key="normal" title="+Add Friend"/>
+                                <connections>
+                                    <action selector="tapToAddFriend:" destination="l43-b5-2Yz" eventType="touchUpInside" id="GoI-K9-E7S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="cH9-96-hOz" firstAttribute="leading" secondItem="Mgx-dA-6uS" secondAttribute="leading" id="4hm-Le-3u6"/>
                             <constraint firstItem="Mgx-dA-6uS" firstAttribute="trailing" secondItem="cH9-96-hOz" secondAttribute="trailing" id="6vZ-tv-og0"/>
-                            <constraint firstItem="Mgx-dA-6uS" firstAttribute="bottom" secondItem="cH9-96-hOz" secondAttribute="bottom" id="dey-Mh-T66"/>
+                            <constraint firstItem="Mgx-dA-6uS" firstAttribute="bottom" secondItem="XLG-2V-XGe" secondAttribute="bottom" constant="12" id="Z1g-QM-kIz"/>
+                            <constraint firstItem="Mgx-dA-6uS" firstAttribute="bottom" secondItem="cH9-96-hOz" secondAttribute="bottom" constant="50" id="dey-Mh-T66"/>
                             <constraint firstItem="el3-qr-PSm" firstAttribute="top" secondItem="Mgx-dA-6uS" secondAttribute="top" constant="8" id="kuv-Gf-YFd"/>
                             <constraint firstItem="cH9-96-hOz" firstAttribute="top" secondItem="el3-qr-PSm" secondAttribute="bottom" id="mer-xf-NN4"/>
                             <constraint firstItem="el3-qr-PSm" firstAttribute="centerX" secondItem="suk-34-9ZY" secondAttribute="centerX" id="neV-nP-xXb"/>
+                            <constraint firstItem="Mgx-dA-6uS" firstAttribute="trailing" secondItem="XLG-2V-XGe" secondAttribute="trailing" constant="20" id="x92-t0-mWy"/>
+                            <constraint firstItem="XLG-2V-XGe" firstAttribute="top" secondItem="cH9-96-hOz" secondAttribute="bottom" constant="8" id="zXX-mW-GyC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mgx-dA-6uS"/>
                     </view>
+                    <connections>
+                        <outlet property="addFriend" destination="XLG-2V-XGe" id="eZG-63-ZM3"/>
+                        <segue destination="dJy-z2-hxd" kind="show" identifier="addF" id="3VP-mk-6Pc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P76-RM-IcP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-152.17391304347828" y="100.44642857142857"/>
+        </scene>
+        <!--addFriend-->
+        <scene sceneID="C5E-Ku-gGJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="addFriend" id="dJy-z2-hxd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="B2I-ZT-ceI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E8c-r5-uQD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="452" y="-4"/>
         </scene>
     </scenes>
     <resources>

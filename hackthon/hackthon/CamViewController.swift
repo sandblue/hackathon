@@ -58,10 +58,10 @@ extension CamViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       let destVC : CameraSecondViewController = segue.destination as! CameraSecondViewController
-//        destVC.dataLastFromPage = "test"
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//       let destVC : CameraSecondViewController = segue.destination as! CameraSecondViewController
+////        destVC.dataLastFromPage = "test"
+//    }
 }
 
 extension CamViewController {
@@ -82,7 +82,7 @@ extension CamViewController {
     
     @IBAction func addFriend(_ sender: UIButton) {
         // perform segue
-        performSegue(withIdentifier: "goAdd", sender: self)
+        performSegue(withIdentifier: "addF", sender: self)
     }
     
 }

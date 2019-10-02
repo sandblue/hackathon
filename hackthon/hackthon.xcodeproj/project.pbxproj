@@ -14,6 +14,8 @@
 		AE2454D2233B8C6600E84170 /* mainpage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2454D1233B8C6600E84170 /* mainpage.storyboard */; };
 		AE2454D4233B932800E84170 /* success.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2454D3233B932800E84170 /* success.storyboard */; };
 		AE2454D6233B953900E84170 /* addFriend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2454D5233B953900E84170 /* addFriend.storyboard */; };
+		AE67E0702344CABB003D583A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67E06F2344CABB003D583A /* ViewController.swift */; };
+		AE67E0722344CC9E003D583A /* friendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE67E0712344CC9E003D583A /* friendListViewController.swift */; };
 		AEB6A9572336865B009DD791 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB6A9562336865B009DD791 /* login.storyboard */; };
 		AEB6A95B23368934009DD791 /* FriendList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB6A95A23368934009DD791 /* FriendList.storyboard */; };
 		B8397D39233476150064FFEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8397D38233476150064FFEA /* AppDelegate.swift */; };
@@ -50,6 +52,8 @@
 		AE2454D1233B8C6600E84170 /* mainpage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mainpage.storyboard; sourceTree = "<group>"; };
 		AE2454D3233B932800E84170 /* success.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = success.storyboard; sourceTree = "<group>"; };
 		AE2454D5233B953900E84170 /* addFriend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addFriend.storyboard; sourceTree = "<group>"; };
+		AE67E06F2344CABB003D583A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE67E0712344CC9E003D583A /* friendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendListViewController.swift; sourceTree = "<group>"; };
 		AEB6A9562336865B009DD791 /* login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		AEB6A95A23368934009DD791 /* FriendList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendList.storyboard; sourceTree = "<group>"; };
 		B8397D35233476150064FFEA /* hackthon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackthon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +134,8 @@
 				AE2454D1233B8C6600E84170 /* mainpage.storyboard */,
 				AE2454D3233B932800E84170 /* success.storyboard */,
 				AE2454D5233B953900E84170 /* addFriend.storyboard */,
+				AE67E06F2344CABB003D583A /* ViewController.swift */,
+				AE67E0712344CC9E003D583A /* friendListViewController.swift */,
 			);
 			path = hackthon;
 			sourceTree = "<group>";
@@ -290,9 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE67E0702344CABB003D583A /* ViewController.swift in Sources */,
 				AE1B38A923437C290071C222 /* CameraController.swift in Sources */,
 				B8397D3B233476150064FFEA /* CamViewController.swift in Sources */,
 				AE1B38AD2343A4AB0071C222 /* CameraSecondViewController.swift in Sources */,
+				AE67E0722344CC9E003D583A /* friendListViewController.swift in Sources */,
 				B8397D39233476150064FFEA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

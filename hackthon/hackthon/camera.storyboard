@@ -61,6 +61,7 @@
                         <outlet property="captureButton" destination="gha-6g-7jI" id="8Cx-YQ-jDg"/>
                         <outlet property="capturePreviewView" destination="VTR-M7-NwA" id="Fu6-zR-sJG"/>
                         <segue destination="tpL-kG-v5Y" kind="show" identifier="goAdd" id="4P7-m0-9PY"/>
+                        <segue destination="VBk-jB-dvY" kind="show" identifier="addF" id="zcQ-Qb-dXy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lTy-vX-EjO" sceneMemberID="firstResponder"/>
@@ -132,6 +133,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMG-JW-mNx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="908.69565217391312" y="133.92857142857142"/>
+        </scene>
+        <!--addFriend-->
+        <scene sceneID="9wp-hF-ZND">
+            <objects>
+                <viewControllerPlaceholder storyboardName="addFriend" id="VBk-jB-dvY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ePE-Am-nuG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KnS-tP-Dk1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="830" y="531"/>
         </scene>
     </scenes>
     <resources>
