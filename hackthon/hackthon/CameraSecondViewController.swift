@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CameraSecondViewController: ViewController {
+class CameraSecondViewController: CamViewController {
     
     @IBOutlet weak var testLbl : UILabel!
     

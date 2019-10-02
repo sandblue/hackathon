@@ -9,7 +9,7 @@
 import UIKit
 import Photos
 
-class ViewController: UIViewController {
+class CamViewController: UIViewController {
     
     @IBOutlet fileprivate var captureButton: UIButton!
     
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController {
+extension CamViewController {
     override func viewDidLoad() {
         
         func configureCameraController() {
@@ -64,7 +64,7 @@ extension ViewController {
     }
 }
 
-extension ViewController {
+extension CamViewController {
 
     
     @IBAction func captureImage(_ sender: UIButton) {
