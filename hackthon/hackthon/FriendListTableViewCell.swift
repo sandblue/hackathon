@@ -13,22 +13,23 @@ class FriendListTableViewCell: UITableViewCell {
   @IBOutlet weak var imageFriend: UIImageView!
   @IBOutlet weak var name: UILabel!
   @IBOutlet weak var btnStatus: UIButton!
-  
   @IBOutlet weak var checkState: UISwitch!
   
   //let defaults = UserDefaults.standard
-  func setupUI(friendAtIndex:Friend) {
+  func setupUI(friendAtIndex:Friend, isCheck:Bool) {
     //let namefriend = UserDefaults.standard.string(forKey: "name/")
     
     imageFriend.image = friendAtIndex.image
     name.text = friendAtIndex.name
-    
+    checkState.isOn = friendAtIndex.status
+    if friendAtIndex.status == true {
+      btnStatus.setTitle("accepted", for: .normal)
+    } else {
+      btnStatus.setTitle("request", for: .normal)
+    }
     
   }
-  var switchON : Bool = false
-  
-  
-  
+  var switchON : Bool = true
   
  // var accepted = false
   
@@ -49,7 +50,7 @@ class FriendListTableViewCell: UITableViewCell {
   }
   @IBAction func btnStatus(_ sender: Any) {
     //accepted = true
-    btnStatus.setTitle("accepted", for: .normal)
+    //btnStatus.setTitle("accepted", for: .normal)
     
     
   }

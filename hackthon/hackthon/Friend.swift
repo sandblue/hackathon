@@ -13,4 +13,5 @@ struct Friend {
   let id: Int
   let image: UIImage
   let name: String
+  let status: Bool 
 }

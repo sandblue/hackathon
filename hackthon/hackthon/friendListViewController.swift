@@ -13,7 +13,7 @@ class friendListViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   var friends: [Friend] = []
-  
+  var ischeckstatus : Bool = true
   override func viewDidLoad() {
  
     let bundle = Bundle(for: FriendListTableViewCell.self)
@@ -21,13 +21,13 @@ class friendListViewController: UIViewController {
     tableView.register(nib, forCellReuseIdentifier: "FriendListTableViewCell")
     
     
-    friends = [Friend(id: 1, image: UIImage(named: "S__16678915_0") ?? UIImage(), name: "boat"),
-               Friend(id: 2, image: UIImage(named: "messageImage_1569414367816") ?? UIImage(), name: "gg"),
-               Friend(id: 3, image: UIImage(named: "messageImage_1569414348000") ?? UIImage(), name: "sleep")]
+    friends = [Friend(id: 1, image: UIImage(named: "S__16678915_0") ?? UIImage(), name: "Faii", status: true),
+               Friend(id: 2, image: UIImage(named: "messageImage_1569414367816") ?? UIImage(), name: "gg", status: true),
+               Friend(id: 3, image: UIImage(named: "messageImage_1569414348000") ?? UIImage(), name: "sleep", status: true)]
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .done, target: self, action: #selector(addTapped))
   }
   @objc func addTapped(sender: UIBarButtonItem) {
-    let storyboard = UIStoryboard(name: "addFriend", bundle: nil) //name -> ชื่อไฟล์, nilเพราะยุ pj เดียวกันยุแล้ว
+    let storyboard = UIStoryboard(name: "addFriend", bundle: nil)
     
     guard let addFriendsViewController = storyboard.instantiateViewController(withIdentifier: "addFriendsViewController") as? addFriendsViewController else {
       return
@@ -64,16 +64,11 @@ extension friendListViewController: UITableViewDataSource {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendListTableViewCell", for: indexPath) as? FriendListTableViewCell else {
       return UITableViewCell()
     }
-//    let beer = beers[indexPath.row]
-//    cell.setupUI(beer: beer)
-    
     let friendAtIndex = friends[indexPath.row]
-    cell.setupUI(friendAtIndex: friendAtIndex)
+    cell.setupUI(friendAtIndex: friendAtIndex, isCheck: ischeckstatus )
 
     return cell
   }
-  
-  
 }
 
 extension friendListViewController: UITableViewDelegate {
@@ -88,26 +83,22 @@ extension friendListViewController: UITableViewDelegate {
      addFriendsViewController.delegate = self
     
      self.navigationController?.pushViewController(addFriendsViewController, animated: true)
-    
-    
   }
-  
 }
 
 extension friendListViewController : setImage {
   func setImageAndString(image: UIImage, name: String, index: Int, isCheck: Bool) {
     if isCheck{
-      let newdata = Friend(id: index + 1, image: image, name: name)
+      let newdata = Friend(id: index + 1, image: image, name: name, status: true)
+      ischeckstatus = true
       friends[index] = newdata
       tableView.reloadData()
     }else {
-      let newdata = Friend(id: friends.count + 1, image: image, name: name)
-      UserDefaults.standard.set(image, forKey: "image3")
+      let newdata = Friend(id: friends.count + 1, image: image, name: name, status: false)
+      //UserDefaults.standard.set(image, forKey: "image3")
       friends.append(newdata)
+      ischeckstatus = false
       tableView.reloadData()
     }
   }
-  
- 
-  
 }
