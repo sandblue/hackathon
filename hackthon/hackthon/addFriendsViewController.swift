@@ -8,13 +8,20 @@
 
 import UIKit
 import ContactsUI
+
+protocol setImage : class{
+  func setImageAndString(image:UIImage,name:String,index:Int,isCheck:Bool)
+}
 class addFriendsViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate,dataDelegate {
 
     @IBOutlet weak var txfName: UITextField!
     @IBOutlet weak var txfTel: UITextField!
     @IBOutlet weak var imFace: UIImageView!
+    weak var delegate : setImage?
+    var index : Int = 0
     var chosenImage = UIImage()
     let picker = UIImagePickerController()
+    var isCheck : Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
@@ -24,6 +31,11 @@ class addFriendsViewController: UIViewController,UIImagePickerControllerDelegate
         self.imFace.addGestureRecognizer(imgChangePhotoTap)
         
     }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+   
+  }
     
     func showChooseImagePopup()
     {
@@ -49,6 +61,7 @@ class addFriendsViewController: UIViewController,UIImagePickerControllerDelegate
         self.picker.sourceType = .photoLibrary
         self.picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
         self.picker.modalPresentationStyle = .fullScreen
+      
         self.present(picker, animated: true, completion: nil)
     }
     
@@ -80,15 +93,31 @@ class addFriendsViewController: UIViewController,UIImagePickerControllerDelegate
             animated: true,
             completion: nil)
     }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "addFriendsViewControllerGoToconTactListViewController" {
+      
+      let viewcontroller = segue.destination as? conTactListViewController
+      viewcontroller?.delegate = self
+      viewcontroller?.name = "boat"
+      
+    }
+    
+  }
+  
+ 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[UIImagePickerController.InfoKey.editedImage]  as? UIImage else {
             return
         }
+      
         self.chosenImage = addFriendsHelper.sharedInstance.imageOrientation(image)
         self.imFace.image = self.chosenImage
+      
+        //UserDefaults.standard.set(self.chosenImage, forKey: "img/")
         dismiss(animated: true) {
-           
+          
         }
     }
     
@@ -106,22 +135,24 @@ class addFriendsViewController: UIViewController,UIImagePickerControllerDelegate
     
     func userDidEnterInformationName(info: String) {
         self.txfName.text = info
+      UserDefaults.standard.set(info, forKey: "name")
     }
     
     @IBAction func addPressed(_ sender: Any) {
-      let storyboard = UIStoryboard(name: "FriendList", bundle: nil)
-      guard let friendListViewController = storyboard.instantiateViewController(withIdentifier: "friendListViewController") as? friendListViewController else {
-        return
-      }
-      self.present(friendListViewController, animated: true) {
-        
-      }
-        
+//      let storyboard = UIStoryboard(name: "FriendList", bundle: nil)
+//      guard let friendListViewController = storyboard.instantiateViewController(withIdentifier: "friendListViewController") as? friendListViewController else {
+//        return
+//      }
+      delegate?.setImageAndString(image: chosenImage, name: txfName.text ?? "", index: index, isCheck: isCheck)
+      self.navigationController?.popViewController(animated: true)
+      
     }
+  
     @IBAction func btnContactPressed(_ sender: Any) {
-        let conTact = UIStoryboard(name: "addFriend", bundle: nil).instantiateViewController(withIdentifier: "conTactListViewController") as! conTactListViewController
-        conTact.delegate = self
-        self.navigationController!.pushViewController(conTact, animated: true)
+//        let conTact = UIStoryboard(name: "addFriend", bundle: nil).instantiateViewController(withIdentifier: "conTactListViewController") as! conTactListViewController
+//      conTact.delegate = self
+//      self.navigationController?.pushViewController(conTact, animated: true)
+      performSegue(withIdentifier: "addFriendsViewControllerGoToconTactListViewController", sender: nil)
     }
     
 }

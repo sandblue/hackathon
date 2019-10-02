@@ -17,9 +17,10 @@ protocol dataDelegate: class {
 class conTactListViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     var dataContact = [contactObj]()
     weak var delegate: dataDelegate?
+    var name = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
         self.fecthData()
     }
     
@@ -46,7 +47,8 @@ class conTactListViewController: UIViewController,UITableViewDataSource,UITableV
             let dataObj = self.dataContact[indexPath.row]
             delegate?.userDidEnterInformation(info: dataObj.contactNumber!)
             delegate?.userDidEnterInformationName(info: dataObj.contactName!)
-            _ = self.navigationController?.popViewController(animated: true)
+      
+            self.navigationController?.popViewController(animated: true)
             
         }
     

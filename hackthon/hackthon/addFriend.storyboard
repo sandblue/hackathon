@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MV1-7n-k6a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,22 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="i2g-Ts-Phi">
-            <objects>
-                <navigationController id="MV1-7n-k6a" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yk4-lz-gBZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="OLj-Tf-c5S" kind="relationship" relationship="rootViewController" id="H52-wm-VIT"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fig-jS-sTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1038" y="-110"/>
-        </scene>
         <!--Add Friends View Controller-->
         <scene sceneID="wrm-Im-wPr">
             <objects>
@@ -36,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="addFriendsViewController" image="messageImage_1569414367816" translatesAutoresizingMaskIntoConstraints="NO" id="3eX-G7-hh7">
-                                <rect key="frame" x="50" y="90" width="315" height="309"/>
+                                <rect key="frame" x="50" y="46" width="315" height="353"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="309" id="wKc-LK-H2R"/>
                                 </constraints>
@@ -129,6 +113,7 @@
                         <outlet property="imFace" destination="3eX-G7-hh7" id="2W2-I7-Pqf"/>
                         <outlet property="txfName" destination="hWx-DV-whX" id="MYt-0e-SWN"/>
                         <outlet property="txfTel" destination="yOA-25-AlV" id="MLK-du-9js"/>
+                        <segue destination="1S0-MU-0dC" kind="show" identifier="addFriendsViewControllerGoToconTactListViewController" id="vbb-G4-GOD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QTB-79-m2N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

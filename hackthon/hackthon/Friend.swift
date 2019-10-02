@@ -8,9 +8,9 @@
 
 import Foundation
 
-
+import UIKit
 struct Friend {
   let id: Int
-  let image: String
+  let image: UIImage
   let name: String
 }

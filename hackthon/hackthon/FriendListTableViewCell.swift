@@ -17,7 +17,17 @@ class FriendListTableViewCell: UITableViewCell {
   @IBOutlet weak var checkState: UISwitch!
   
   //let defaults = UserDefaults.standard
+  func setupUI(friendAtIndex:Friend) {
+    //let namefriend = UserDefaults.standard.string(forKey: "name/")
+    
+    imageFriend.image = friendAtIndex.image
+    name.text = friendAtIndex.name
+    
+    
+  }
   var switchON : Bool = false
+  
+  
   
   
  // var accepted = false
@@ -43,6 +53,7 @@ class FriendListTableViewCell: UITableViewCell {
     
     
   }
+    
   
   
   
