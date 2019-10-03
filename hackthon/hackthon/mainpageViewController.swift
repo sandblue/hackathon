@@ -11,6 +11,15 @@ import UIKit
 
 class mainpageViewController: UIViewController {
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.setNavigationBarHidden(true, animated: animated)
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+    navigationController?.setNavigationBarHidden(false, animated: animated)
+  }
   @IBAction func btnface(_ sender: Any) {
     let storyboard = UIStoryboard(name: "TakePhoto", bundle: nil)
     guard let TakePhotoViewController = storyboard.instantiateViewController(withIdentifier: "TakePhotoViewController") as? TakePhotoViewController else {
