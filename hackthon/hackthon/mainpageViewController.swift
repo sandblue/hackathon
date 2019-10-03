@@ -11,6 +11,14 @@ import UIKit
 
 class mainpageViewController: UIViewController {
   
+  @IBAction func btnface(_ sender: Any) {
+    let storyboard = UIStoryboard(name: "TakePhoto", bundle: nil)
+    guard let TakePhotoViewController = storyboard.instantiateViewController(withIdentifier: "TakePhotoViewController") as? TakePhotoViewController else {
+      return
+    }
+    self.navigationController?.pushViewController(TakePhotoViewController, animated: true)
+  }
+  
   
   @IBAction func btnFriendList(_ sender: Any) {
     let storyboard = UIStoryboard(name: "FriendList", bundle: nil)
