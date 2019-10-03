@@ -12,7 +12,7 @@
         <scene sceneID="USX-zP-huJ">
             <objects>
                 <viewController storyboardIdentifier="TakePhotoViewController" id="dDg-QL-RCg" customClass="TakePhotoViewController" customModule="hackthon" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="C75-8O-p9b" customClass="TakePhoto">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="TakePhotoViewController" id="C75-8O-p9b">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -21,8 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="API"/>
                                 <connections>
-                                    <action selector="addFriend:" destination="dDg-QL-RCg" eventType="touchUpInside" id="6ju-VC-WMw"/>
-                                    <action selector="btnApi:" destination="dDg-QL-RCg" eventType="touchUpInside" id="Vdu-XJ-zeK"/>
+                                    <action selector="btnApi:" destination="dDg-QL-RCg" eventType="touchUpInside" id="P4r-Vt-FKd"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zx-EL-V0A">
@@ -35,6 +34,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUc-PT-xYr">
                                 <rect key="frame" x="0.0" y="514" width="375" height="30"/>
                                 <state key="normal" title="ADD"/>
+                                <connections>
+                                    <action selector="addFriend:" destination="dDg-QL-RCg" eventType="touchUpInside" id="CGs-se-piZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,8 +51,7 @@
                         <viewLayoutGuide key="safeArea" id="2wC-Xd-Znq"/>
                     </view>
                     <connections>
-                        <outlet property="addFriend" destination="pUc-PT-xYr" id="j6d-KV-SPO"/>
-                        <outlet property="capturePreviewView" destination="1zx-EL-V0A" id="FNq-BN-A4Z"/>
+                        <outlet property="previewView" destination="1zx-EL-V0A" id="Gq5-CL-cy5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzq-4y-Q2e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
