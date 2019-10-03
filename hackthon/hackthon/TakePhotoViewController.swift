@@ -31,17 +31,17 @@ class TakePhotoViewController: UIViewController {
 extension TakePhotoViewController {
     override func viewDidLoad() {
         
-        func configureCameraController() {
-            cameraController.prepare {(error) in
-                if let error = error {
-                    print(error)
-                }
-                
-                try? self.cameraController.displayPreview(on: self.capturePreviewView)
-            }
-        }
-        configureCameraController()
-        
+//        func configureCameraController() {
+//          cameraController.prepare(for: "TakePhoto") {(error) in
+//                if let error = error {
+//                    print(error)
+//                }
+//
+//                try? self.cameraController.displayPreview(on: self.capturePreviewView)
+//            }
+//        }
+//        configureCameraController()
+      
     }
 }
 

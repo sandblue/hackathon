@@ -9,7 +9,7 @@ import UIKit
 import AVKit
 import Vision
 
-class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
   
   // Main view for showing camera content.
   @IBOutlet weak var previewView: UIView?
@@ -572,3 +572,4 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
   }
 }
+
