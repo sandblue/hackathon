@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ApiManager {
+class ApiManager: UIViewController {
   
   public func request() {
     let test = URL(string: "https://api.partners.scb/partners/sandbox/v1/oauth/token")!
@@ -82,6 +82,7 @@ class ApiManager {
             DispatchQueue.main.sync {
                 UIApplication.shared.open( deeplink, options: [:]) { (Bool) in
                 print("success")
+                
             }
             }
           } catch {
