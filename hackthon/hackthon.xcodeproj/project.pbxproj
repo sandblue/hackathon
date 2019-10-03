@@ -26,6 +26,7 @@
 		AE2454D2233B8C6600E84170 /* mainpage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2454D1233B8C6600E84170 /* mainpage.storyboard */; };
 		AE2454D4233B932800E84170 /* success.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2454D3233B932800E84170 /* success.storyboard */; };
 		AE2454D6233B953900E84170 /* addFriend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE2454D5233B953900E84170 /* addFriend.storyboard */; };
+		AE624F062345E82C0080FA4A /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE624F052345E82C0080FA4A /* CameraController.swift */; };
 		AEB6A9572336865B009DD791 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB6A9562336865B009DD791 /* login.storyboard */; };
 		AEB6A95B23368934009DD791 /* FriendList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEB6A95A23368934009DD791 /* FriendList.storyboard */; };
 		B8397D39233476150064FFEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8397D38233476150064FFEA /* AppDelegate.swift */; };
@@ -81,6 +82,7 @@
 		AE2454D1233B8C6600E84170 /* mainpage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = mainpage.storyboard; sourceTree = "<group>"; };
 		AE2454D3233B932800E84170 /* success.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = success.storyboard; sourceTree = "<group>"; };
 		AE2454D5233B953900E84170 /* addFriend.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = addFriend.storyboard; sourceTree = "<group>"; };
+		AE624F052345E82C0080FA4A /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		AEB6A9562336865B009DD791 /* login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		AEB6A95A23368934009DD791 /* FriendList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendList.storyboard; sourceTree = "<group>"; };
 		B8397D35233476150064FFEA /* hackthon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hackthon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 		B8397D37233476150064FFEA /* hackthon */ = {
 			isa = PBXGroup;
 			children = (
+				AE624F052345E82C0080FA4A /* CameraController.swift */,
 				05102D062345D8A90029DEE8 /* ApiManager.swift */,
 				B8397D38233476150064FFEA /* AppDelegate.swift */,
 				B8397D3A233476150064FFEA /* ViewController.swift */,
@@ -459,6 +462,7 @@
 				051578702342336600B01A11 /* friendListViewController.swift in Sources */,
 				7EA71E50233FC13F00C7C9FD /* conTactTableViewCell.swift in Sources */,
 				05157874234238D700B01A11 /* Friend.swift in Sources */,
+				AE624F062345E82C0080FA4A /* CameraController.swift in Sources */,
 				7EA71E52233FC38F00C7C9FD /* contactObj.swift in Sources */,
 				05102D072345D8A90029DEE8 /* ApiManager.swift in Sources */,
 				0540130C23452CD8003CE560 /* APIManager.swift in Sources */,
@@ -640,14 +644,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XKK9SXZK6K;
+				DEVELOPMENT_TEAM = S92P83JU5Z;
 				INFOPLIST_FILE = hackthon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.123.hackthon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1234.hackthon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -660,14 +664,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XKK9SXZK6K;
+				DEVELOPMENT_TEAM = S92P83JU5Z;
 				INFOPLIST_FILE = hackthon/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.123.hackthon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.1234.hackthon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

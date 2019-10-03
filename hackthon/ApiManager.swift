@@ -7,7 +7,6 @@
 //
 
 import Foundation
-
 import UIKit
 
 class ApiManager {
@@ -78,12 +77,12 @@ class ApiManager {
       } else if let dataDeep = data, let response = response as? HTTPURLResponse {
         if response.statusCode == 201 {
           do {
-            print(response.statusCode)
             let result = try JSONDecoder().decode(DEEPLINK.self, from: dataDeep)
-            print(result)
-            let x = URL(string: result.data.deeplinkUrl)!
-            UIApplication.shared.open( x, options: [:]) { (Bool) in
-              print("success")
+            let deeplink = URL(string: result.data.deeplinkUrl+"?callback_url=Justface://")!
+            DispatchQueue.main.sync {
+                UIApplication.shared.open( deeplink, options: [:]) { (Bool) in
+                print("success")
+            }
             }
           } catch {
             print(error)

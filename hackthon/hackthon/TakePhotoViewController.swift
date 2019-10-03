@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Photos
 
 class TakePhotoViewController: UIViewController {
   var deeplink: String = ""
@@ -18,5 +19,7 @@ class TakePhotoViewController: UIViewController {
   override func viewDidLoad() {
     //ApiManager().request() 
   }
+    
+    
 
 }
