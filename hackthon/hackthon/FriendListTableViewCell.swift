@@ -15,6 +15,7 @@ class FriendListTableViewCell: UITableViewCell {
   @IBOutlet weak var btnStatus: UIButton!
   @IBOutlet weak var checkState: UISwitch!
   
+  
   //let defaults = UserDefaults.standard
   func setupUI(friendAtIndex:Friend, isCheck:Bool) {
     //let namefriend = UserDefaults.standard.string(forKey: "name/")
