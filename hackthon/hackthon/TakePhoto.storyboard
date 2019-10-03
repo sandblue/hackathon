@@ -21,6 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="API"/>
                                 <connections>
+                                    <action selector="addFriend:" destination="dDg-QL-RCg" eventType="touchUpInside" id="6ju-VC-WMw"/>
                                     <action selector="btnApi:" destination="dDg-QL-RCg" eventType="touchUpInside" id="Vdu-XJ-zeK"/>
                                 </connections>
                             </button>
@@ -47,6 +48,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2wC-Xd-Znq"/>
                     </view>
+                    <connections>
+                        <outlet property="addFriend" destination="pUc-PT-xYr" id="j6d-KV-SPO"/>
+                        <outlet property="capturePreviewView" destination="1zx-EL-V0A" id="FNq-BN-A4Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzq-4y-Q2e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
