@@ -43,7 +43,7 @@ class TakePhotoViewController: UIViewController, AVCaptureVideoDataOutputSampleB
     // AVCapture variables to hold sequence data
     var session: AVCaptureSession?
     var previewLayer: AVCaptureVideoPreviewLayer?
-    var tapGestureRecognizer: UITapGestureRecognizer!
+    var tapGestureRecognizer: UISwipeGestureRecognizer!
     
     var videoDataOutput: AVCaptureVideoDataOutput?
     var videoDataOutputQueue: DispatchQueue?
@@ -73,8 +73,9 @@ class TakePhotoViewController: UIViewController, AVCaptureVideoDataOutputSampleB
         self.prepareVisionRequest()
         
         self.session?.startRunning()
-        
-        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(todoImageViewTapped(sender: )))
+    
+
+        tapGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(todoImageViewTapped(sender: )))
         previewView?.gestureRecognizers = [tapGestureRecognizer]
     }
     

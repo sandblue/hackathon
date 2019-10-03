@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,37 +18,38 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zx-EL-V0A">
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIA-wH-D0k">
-                                        <rect key="frame" x="274" y="629" width="64" height="64"/>
-                                        <state key="normal" image="add-contact (1)"/>
-                                        <connections>
-                                            <action selector="btnApi:" destination="dDg-QL-RCg" eventType="touchUpInside" id="P4r-Vt-FKd"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="MIA-wH-D0k" secondAttribute="trailing" constant="37" id="Dgc-vr-Syl"/>
-                                    <constraint firstAttribute="bottom" secondItem="MIA-wH-D0k" secondAttribute="bottom" constant="41" id="ZbS-hA-UMz"/>
-                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="keK-O4-nmV" appends="YES" id="tvS-L6-wsV"/>
+                                </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUc-PT-xYr">
-                                <rect key="frame" x="0.0" y="514" width="375" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUc-PT-xYr">
+                                <rect key="frame" x="0.0" y="391" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="addFriend:" destination="dDg-QL-RCg" eventType="touchUpInside" id="CGs-se-piZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIA-wH-D0k">
+                                <rect key="frame" x="230" y="626" width="129" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="136" id="0v7-Db-ukV"/>
+                                    <constraint firstAttribute="width" secondItem="MIA-wH-D0k" secondAttribute="height" multiplier="129:136" id="fei-dO-8lw"/>
+                                </constraints>
+                                <state key="normal" image="add-contact (1)"/>
+                                <connections>
+                                    <action selector="addFriend:" destination="dDg-QL-RCg" eventType="touchUpInside" id="KFx-nO-kq1"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2wC-Xd-Znq" firstAttribute="trailing" secondItem="pUc-PT-xYr" secondAttribute="trailing" id="K9L-k9-EW5"/>
+                            <constraint firstItem="2wC-Xd-Znq" firstAttribute="bottom" secondItem="MIA-wH-D0k" secondAttribute="bottom" constant="16" id="GPq-Ez-K7h"/>
+                            <constraint firstItem="2wC-Xd-Znq" firstAttribute="trailing" secondItem="MIA-wH-D0k" secondAttribute="trailing" constant="16" id="IiP-HJ-mDX"/>
                             <constraint firstItem="1zx-EL-V0A" firstAttribute="leading" secondItem="2wC-Xd-Znq" secondAttribute="leading" id="Kt2-ER-QIr"/>
-                            <constraint firstItem="pUc-PT-xYr" firstAttribute="leading" secondItem="2wC-Xd-Znq" secondAttribute="leading" id="LBh-ju-pdh"/>
                             <constraint firstItem="1zx-EL-V0A" firstAttribute="top" secondItem="2wC-Xd-Znq" secondAttribute="top" id="ato-YI-7Ft"/>
                             <constraint firstItem="1zx-EL-V0A" firstAttribute="trailing" secondItem="2wC-Xd-Znq" secondAttribute="trailing" id="dUt-SB-e6r"/>
-                            <constraint firstItem="pUc-PT-xYr" firstAttribute="top" secondItem="2wC-Xd-Znq" secondAttribute="top" constant="470" id="pGl-Ow-0Gg"/>
                             <constraint firstItem="1zx-EL-V0A" firstAttribute="bottom" secondItem="2wC-Xd-Znq" secondAttribute="bottom" id="vtJ-Wo-vbk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2wC-Xd-Znq"/>
@@ -60,6 +59,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzq-4y-Q2e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="keK-O4-nmV"/>
             </objects>
             <point key="canvasLocation" x="-26.399999999999999" y="66.502463054187189"/>
         </scene>
