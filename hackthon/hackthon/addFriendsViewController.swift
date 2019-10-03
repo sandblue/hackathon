@@ -30,6 +30,9 @@ class addFriendsViewController: UIViewController,UIImagePickerControllerDelegate
         self.imFace.isUserInteractionEnabled = true
         self.imFace.addGestureRecognizer(imgChangePhotoTap)
         
+        self.imFace.layer.cornerRadius = self.imFace.frame.size.width / 2
+        self.imFace.layer.masksToBounds = true
+        
     }
   
   override func viewWillDisappear(_ animated: Bool) {
