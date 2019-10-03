@@ -65,6 +65,7 @@ class TakePhotoViewController: UIViewController, AVCaptureVideoDataOutputSampleB
     // MARK: UIViewController overrides
 
     override func viewDidLoad() {
+<<<<<<< HEAD
         super.viewDidLoad()
 
         self.session = self.setupAVCaptureSession()
@@ -596,6 +597,20 @@ class TakePhotoViewController: UIViewController, AVCaptureVideoDataOutputSampleB
                 NSLog("Failed to perform FaceLandmarkRequest: %@", error)
             }
         }
+=======
+        
+//        func configureCameraController() {
+//          cameraController.prepare(for: "TakePhoto") {(error) in
+//                if let error = error {
+//                    print(error)
+//                }
+//
+//                try? self.cameraController.displayPreview(on: self.capturePreviewView)
+//            }
+//        }
+//        configureCameraController()
+      
+>>>>>>> 6d5b8429a87c3c8215bf63e311ab2d163dc4975a
     }
 }
 

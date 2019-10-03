@@ -1,3 +1,9 @@
+/*
+ See LICENSE folder for this sample’s licensing information.
+ 
+ Abstract:
+ Contains the main app implementation using Vision.
+ */
 
 import UIKit
 import AVKit
@@ -566,3 +572,4 @@ class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDe
     }
   }
 }
+

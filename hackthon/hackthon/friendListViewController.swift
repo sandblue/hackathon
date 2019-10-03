@@ -22,8 +22,8 @@ class friendListViewController: UIViewController {
     
     
     friends = [Friend(id: 1, image: UIImage(named: "S__16678915_0") ?? UIImage(), name: "Faii", status: true),
-               Friend(id: 2, image: UIImage(named: "messageImage_1569414367816") ?? UIImage(), name: "gg", status: true),
-               Friend(id: 3, image: UIImage(named: "messageImage_1569414348000") ?? UIImage(), name: "sleep", status: true)]
+               Friend(id: 2, image: UIImage(named: "messageImage_1569414367816") ?? UIImage(), name: "bewty", status: true),
+               Friend(id: 3, image: UIImage(named: "messageImage_1569414348000") ?? UIImage(), name: "maybe", status: true)]
     self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .done, target: self, action: #selector(addTapped))
   }
   @objc func addTapped(sender: UIBarButtonItem) {

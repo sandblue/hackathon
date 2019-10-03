@@ -19,22 +19,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="383" height="76.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" fixedFrame="YES" image="messageImage_1569414367816" translatesAutoresizingMaskIntoConstraints="NO" id="qsH-nl-Nqd">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="messageImage_1569414367816" translatesAutoresizingMaskIntoConstraints="NO" id="qsH-nl-Nqd">
                         <rect key="frame" x="20" y="6" width="63" height="63"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="63" id="8j7-of-fz9"/>
+                            <constraint firstAttribute="width" constant="63" id="dZh-Wq-uIS"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nameeeee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROp-WS-CRt">
-                        <rect key="frame" x="108" y="24" width="85" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameeeee" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROp-WS-CRt">
+                        <rect key="frame" x="108" y="24" width="76" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <switch opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qtr-VS-U0f">
+                        <rect key="frame" x="305" y="15" width="51" height="31"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <connections>
+                            <action selector="switchStatus:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JGP-eF-0aR"/>
+                        </connections>
+                    </switch>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjh-Q4-68W">
-                        <rect key="frame" x="297" y="45" width="69" height="19"/>
+                        <rect key="frame" x="296" y="48" width="71" height="14"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <state key="normal" title="request">
@@ -44,14 +53,15 @@
                             <action selector="btnStatus:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kwJ-1q-nWE"/>
                         </connections>
                     </button>
-                    <switch opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qtr-VS-U0f">
-                        <rect key="frame" x="305" y="15" width="51" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <connections>
-                            <action selector="switchStatus:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JGP-eF-0aR"/>
-                        </connections>
-                    </switch>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="ROp-WS-CRt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="2WJ-bO-4U9"/>
+                    <constraint firstItem="ROp-WS-CRt" firstAttribute="leading" secondItem="qsH-nl-Nqd" secondAttribute="trailing" constant="25" id="3mZ-I4-Npz"/>
+                    <constraint firstItem="qsH-nl-Nqd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="MsM-1r-9sJ"/>
+                    <constraint firstAttribute="bottom" secondItem="qsH-nl-Nqd" secondAttribute="bottom" constant="7.5" id="SDm-6a-Yyf"/>
+                    <constraint firstAttribute="bottom" secondItem="ROp-WS-CRt" secondAttribute="bottom" constant="32.5" id="aKc-FD-Juo"/>
+                    <constraint firstItem="qsH-nl-Nqd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="iAc-77-ji4"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
