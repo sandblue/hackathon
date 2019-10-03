@@ -43,7 +43,7 @@ class TakePhotoViewController: UIViewController, AVCaptureVideoDataOutputSampleB
     // AVCapture variables to hold sequence data
     var session: AVCaptureSession?
     var previewLayer: AVCaptureVideoPreviewLayer?
-    var tapGestureRecognizer: UISwipeGestureRecognizer!
+    var tapGestureRecognizer: UITapGestureRecognizer!
     
     var videoDataOutput: AVCaptureVideoDataOutput?
     var videoDataOutputQueue: DispatchQueue?
@@ -75,7 +75,7 @@ class TakePhotoViewController: UIViewController, AVCaptureVideoDataOutputSampleB
         self.session?.startRunning()
     
 
-        tapGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(todoImageViewTapped(sender: )))
+        tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(todoImageViewTapped(sender: )))
         previewView?.gestureRecognizers = [tapGestureRecognizer]
     }
     
@@ -669,7 +669,7 @@ extension TakePhotoViewController {
         // push next page
         
         let storyboard = UIStoryboard(name: "addFriend", bundle: nil)
-        
+
         guard let addFriendsViewController = storyboard.instantiateViewController(withIdentifier: "addFriendsViewController") as? addFriendsViewController else {
           return
         }
