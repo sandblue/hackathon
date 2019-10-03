@@ -81,11 +81,18 @@
                                     <constraint firstAttribute="width" constant="125" id="vhN-LW-uJE"/>
                                 </constraints>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2562-10-03 at 20.29.29" translatesAutoresizingMaskIntoConstraints="NO" id="toj-d4-kX8">
+                                <rect key="frame" x="0.0" y="578" width="414" height="318"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="318" id="uyy-7B-7s2"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Oxr-Lm-dUM" firstAttribute="top" secondItem="e6w-M1-mZ1" secondAttribute="bottom" constant="27" id="0XI-qB-EjJ"/>
                             <constraint firstItem="hWx-DV-whX" firstAttribute="top" secondItem="3eX-G7-hh7" secondAttribute="bottom" constant="87" id="1y5-Rt-BYm"/>
+                            <constraint firstItem="toj-d4-kX8" firstAttribute="trailing" secondItem="UDw-bz-OTB" secondAttribute="trailing" id="2L1-aB-yTx"/>
                             <constraint firstItem="UDw-bz-OTB" firstAttribute="trailing" secondItem="Pnk-bP-WQL" secondAttribute="trailing" constant="20" id="43q-Th-8vq"/>
                             <constraint firstItem="3eX-G7-hh7" firstAttribute="top" secondItem="UDw-bz-OTB" secondAttribute="top" constant="77" id="GmC-ZC-9F6"/>
                             <constraint firstItem="UDw-bz-OTB" firstAttribute="trailing" secondItem="hWx-DV-whX" secondAttribute="trailing" constant="75" id="IFu-B4-veu"/>
@@ -94,6 +101,8 @@
                             <constraint firstItem="UDw-bz-OTB" firstAttribute="trailing" secondItem="D6v-zn-3lP" secondAttribute="trailing" constant="81" id="SXW-gP-Lv5"/>
                             <constraint firstItem="D6v-zn-3lP" firstAttribute="top" secondItem="yOA-25-AlV" secondAttribute="bottom" constant="-31" id="UcN-NQ-Bfl"/>
                             <constraint firstItem="Pnk-bP-WQL" firstAttribute="top" secondItem="yOA-25-AlV" secondAttribute="bottom" constant="37" id="ZTC-XI-B5E"/>
+                            <constraint firstItem="toj-d4-kX8" firstAttribute="leading" secondItem="UDw-bz-OTB" secondAttribute="leading" id="d00-xk-cxU"/>
+                            <constraint firstAttribute="bottom" secondItem="toj-d4-kX8" secondAttribute="bottom" id="d7q-gQ-b7q"/>
                             <constraint firstItem="Pnk-bP-WQL" firstAttribute="leading" secondItem="UDw-bz-OTB" secondAttribute="leading" constant="20" id="dz6-oh-XLO"/>
                             <constraint firstItem="e6w-M1-mZ1" firstAttribute="leading" secondItem="UDw-bz-OTB" secondAttribute="leading" constant="38" id="fDI-cq-nFa"/>
                             <constraint firstItem="Pnk-bP-WQL" firstAttribute="top" secondItem="D6v-zn-3lP" secondAttribute="bottom" constant="38" id="gOS-ze-ih8"/>
@@ -202,6 +211,7 @@
     </scenes>
     <resources>
         <image name="Screen Shot 2562-09-30 at 19.38.21" width="144" height="138"/>
+        <image name="Screen Shot 2562-10-03 at 20.29.29" width="1392" height="1082"/>
         <image name="male-user-profile-picture" width="64" height="64"/>
     </resources>
 </document>
