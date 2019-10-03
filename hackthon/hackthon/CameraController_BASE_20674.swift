@@ -1,9 +1,15 @@
+/*
+ See LICENSE folder for this sample’s licensing information.
+ 
+ Abstract:
+ Contains the main app implementation using Vision.
+ */
 
 import UIKit
 import AVKit
 import Vision
 
-class CameraController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
   
   // Main view for showing camera content.
   @IBOutlet weak var previewView: UIView?
