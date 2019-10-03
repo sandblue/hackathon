@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05102D072345D8A90029DEE8 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05102D062345D8A90029DEE8 /* ApiManager.swift */; };
 		051578702342336600B01A11 /* friendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0515786F2342336600B01A11 /* friendListViewController.swift */; };
 		05157874234238D700B01A11 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05157873234238D700B01A11 /* Friend.swift */; };
 		0515787723423A8500B01A11 /* FriendListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0515787523423A8500B01A11 /* FriendListTableViewCell.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05102D062345D8A90029DEE8 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = ../ApiManager.swift; sourceTree = "<group>"; };
 		0515786F2342336600B01A11 /* friendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friendListViewController.swift; sourceTree = "<group>"; };
 		05157873234238D700B01A11 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		0515787523423A8500B01A11 /* FriendListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListTableViewCell.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		B8397D37233476150064FFEA /* hackthon */ = {
 			isa = PBXGroup;
 			children = (
+				05102D062345D8A90029DEE8 /* ApiManager.swift */,
 				B8397D38233476150064FFEA /* AppDelegate.swift */,
 				B8397D3A233476150064FFEA /* ViewController.swift */,
 				B8397D3C233476150064FFEA /* Main.storyboard */,
@@ -457,6 +460,7 @@
 				7EA71E50233FC13F00C7C9FD /* conTactTableViewCell.swift in Sources */,
 				05157874234238D700B01A11 /* Friend.swift in Sources */,
 				7EA71E52233FC38F00C7C9FD /* contactObj.swift in Sources */,
+				05102D072345D8A90029DEE8 /* ApiManager.swift in Sources */,
 				0540130C23452CD8003CE560 /* APIManager.swift in Sources */,
 				0540130A23452733003CE560 /* TakePhotoViewController.swift in Sources */,
 				7EA71E4A233FA01300C7C9FD /* addFriendsViewController.swift in Sources */,
