@@ -12,22 +12,11 @@ import UIKit
 class TakePhotoViewController: UIViewController {
   var deeplink: String = ""
   @IBAction func btnApi(_ sender: Any) {
-    
+    ApiManager().request()
     
   }
   override func viewDidLoad() {
-    APIManager().postCustomer()
-    
-    APIManager().generateDeeplink() { result in
-      let results: [String: AnyObject] = result as! [String : AnyObject]
-      for index in results {
-        if index.key == "deeplinkUrl" {
-          self.deeplink = index.value as! String
-          print("deeplink: \(index)")
-        }
-      }
-    }
-    
+    //ApiManager().request() 
   }
 
 }
