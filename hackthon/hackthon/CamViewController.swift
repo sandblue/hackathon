@@ -19,6 +19,10 @@ class CamViewController: UIViewController {
     
     @IBOutlet weak var addFriend: UIButton!
     
+    @IBOutlet weak var alertBtn: UIButton!
+    
+    @IBOutlet weak var mockBtn: UIButton!
+    
     ///Allows the user to put the camera in photo mode.
 //    @IBOutlet fileprivate var photoModeButton: UIButton!
 //    @IBOutlet fileprivate var toggleCameraButton: UIButton!
@@ -29,8 +33,8 @@ class CamViewController: UIViewController {
     
     let cameraController = CameraController()
     
-    override var prefersStatusBarHidden: Bool { return true }
     
+    override var prefersStatusBarHidden: Bool { return true }
 }
 
 extension CamViewController {
@@ -42,21 +46,22 @@ extension CamViewController {
                     print(error)
                 }
                 
-//                try? self.cameraController.displayPreview(on: self.capturePreviewView)
+                try? self.cameraController.displayPreview(on: self.capturePreviewView)
             }
         }
         
-//        func styleCaptureButton() {
-//            captureButton.layer.borderColor = UIColor.black.cgColor
-//            captureButton.layer.borderWidth = 2
-//
-//            captureButton.layer.cornerRadius = min(captureButton.frame.width, captureButton.frame.height) / 2
-//        }
-//
-//        styleCaptureButton()
+        func styleCaptureButton() {
+            captureButton.layer.borderColor = UIColor.black.cgColor
+            captureButton.layer.borderWidth = 2
+
+            captureButton.layer.cornerRadius = min(captureButton.frame.width, captureButton.frame.height) / 2
+        }
+
+        styleCaptureButton()
         configureCameraController()
         
     }
+    
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //       let destVC : CameraSecondViewController = segue.destination as! CameraSecondViewController
@@ -65,6 +70,8 @@ extension CamViewController {
 }
 
 extension CamViewController {
+    
+    
 
     
     @IBAction func captureImage(_ sender: UIButton) {
@@ -84,6 +91,28 @@ extension CamViewController {
         // perform segue
         performSegue(withIdentifier: "addF", sender: self)
     }
+    
+    @IBAction func showAlert(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Warning!", message:
+            "This guy is not in your friend list", preferredStyle: .alert)
+        
+//        alertController.addAction(UIAlertAction(title: "add", style: .default, handler: { [weak self] action in
+//            addFriend(self.addFriend)
+//
+//        }))
+
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func mockAPICalled(_ sender: Any) {
+        
+        //call api
+        print("called")
+    }
+    
+    
     
 }
 
