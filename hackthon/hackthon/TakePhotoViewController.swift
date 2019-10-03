@@ -78,11 +78,13 @@ class TakePhotoViewController: UIViewController, AVCaptureVideoDataOutputSampleB
         previewView?.gestureRecognizers = [tapGestureRecognizer]
     }
     
-    @objc func todoImageViewTapped(sender: Any){
-           print("Image View is tapped!")
-           ApiManager().request()
-          // delegate?.didCheckTodoItem(cell: self)
-       }
+  @objc func todoImageViewTapped(sender: Any){
+    print("Image View is tapped!")
+    self.navigationController?.popToRootViewController(animated: false)
+    ApiManager().request()
+    
+    
+  }
        
     
     override func didReceiveMemoryWarning() {
