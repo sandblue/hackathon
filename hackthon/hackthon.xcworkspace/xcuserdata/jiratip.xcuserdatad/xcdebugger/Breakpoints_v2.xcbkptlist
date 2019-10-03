@@ -7,32 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "89205C76-9ED8-43A6-AF77-6B9F59175D25"
-            shouldBeEnabled = "Yes"
+            uuid = "D664316E-4D85-4E8B-A6BB-3C4448F71F75"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "hackthon/mainpageViewController.swift"
+            filePath = "hackthon/TakePhotoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "btnface(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D5985097-CE08-498C-B787-C79A0260B081"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "hackthon/mainpageViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "btnface(_:)"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "todoImageViewTapped(sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

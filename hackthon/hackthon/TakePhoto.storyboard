@@ -27,6 +27,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zx-EL-V0A">
                                 <rect key="frame" x="0.0" y="44" width="375" height="400"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="kfh-39-RA6"/>
                                 </constraints>
