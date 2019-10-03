@@ -16,6 +16,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yk4-lz-gBZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.51149770269999995" green="0.33694163449999998" blue="0.88872582150000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
                         <segue destination="OLj-Tf-c5S" kind="relationship" relationship="rootViewController" id="H52-wm-VIT"/>
@@ -33,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="messageImage_1569414367816" translatesAutoresizingMaskIntoConstraints="NO" id="3eX-G7-hh7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="male-user-profile-picture" translatesAutoresizingMaskIntoConstraints="NO" id="3eX-G7-hh7">
                                 <rect key="frame" x="49.5" y="90" width="315" height="309"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="315" id="e8m-CV-mQR"/>
@@ -217,6 +218,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="male-user-profile-picture" width="64" height="64"/>
         <image name="messageImage_1569414367816" width="1000" height="750"/>
     </resources>
 </document>
